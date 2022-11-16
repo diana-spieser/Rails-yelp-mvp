@@ -1,0 +1,6 @@
+<p style="color: green"><%= notice %></p>
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li><%= review.content %> <%= link_to "delete", review_path(review), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?' }  %> </li>
+  <% end %>
+</ul>
